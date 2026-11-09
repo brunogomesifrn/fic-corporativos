@@ -1,0 +1,24 @@
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IF</div>
+      <div class="logo-text">IFRN FIC<span>Formação Inicial e Continuada</span></div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="{% url 'index' %}">Inicial</a>
+      <a href="{% url 'curso_galeria' %}">Cursos</a>
+      <a href="{% url 'contato' %}">Contato</a>
+      <a href="{% url 'transparencia' %}">Transparência</a>
+      <div class="nav-divider"></div>
+      {% if not user.is_authenticated %}
+      <a href="{% url 'login' %}" class="btn-nav btn-login">Login</a>
+      <a href="{% url 'cadastro' %}" class="btn-nav btn-cadastro">Cadastro</a>
+      {% else %}
+      <a href="{% url 'sair' %}" class="btn-nav btn-login">Sair</a>
+      {% endif %}
+    </div>
+  </div>
+</nav>
