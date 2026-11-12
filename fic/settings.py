@@ -28,11 +28,11 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="", cast=Csv())
-CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", default="", cast=Csv())
+#CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", default="", cast=Csv())
 
-X_FRAME_OPTIONS = "DENY"                         # impede o site de ser exibido em <iframe> (clickjacking)
-SECURE_CONTENT_TYPE_NOSNIFF = True               # navegador não "adivinha" o tipo do arquivo
-SECURE_REFERRER_POLICY = "same-origin"           # não vaza URLs internas para outros sites
+#X_FRAME_OPTIONS = "DENY"                         # impede o site de ser exibido em <iframe> (clickjacking)
+#SECURE_CONTENT_TYPE_NOSNIFF = True               # navegador não "adivinha" o tipo do arquivo
+#SECURE_REFERRER_POLICY = "same-origin"           # não vaza URLs internas para outros sites
 
 # Application definition
 
