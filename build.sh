@@ -8,4 +8,4 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 # Cria o superuser sem pedir confirmação no terminal
-python manage.py createsuperuser --no-input || true
+python manage.py createsuperuser --username=admin --cpf=11111 --email=admin@exemplo.com --password=1234@Ifrn
